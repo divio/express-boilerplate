@@ -1,6 +1,6 @@
-======================
-Express JS Boilerplate
-======================
+===================
+Express Boilerplate
+===================
 
 `Divio Cloud <http://www.divio.com/>`_ based boilerplate to develop with Express JS.
 
