@@ -10,7 +10,8 @@ services:
     volumes:
       - ".:/app:rw"
       - "./data:/data:rw"
-    command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; npm start --prefix myapp/'
+
+    command: sh -c './wait-for db:5432 -- npm start --prefix myapp'
     depends_on:
       - db
 
