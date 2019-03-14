@@ -2,5 +2,10 @@
    "package-name": "express-boilerplate",
    "templates": [],
    "identifier": "node",
-   "version": "4.16.4"
+   "version": "4.16.4",
+   "excluded": [
+        "node_modules",
+        "LICENSE.txt",
+        ".DS_Store"
+    ]
 }

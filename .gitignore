@@ -1,29 +1,16 @@
-*.py[cod]
-*$py.class
-*.egg-info
-*.log
-*.pot
-.DS_Store
-.coverage/
-.eggs/
-.idea/
-.project/
-.pydevproject/
-.settings/
-.tox/
-__pycache__/
-build/
-dist/
-env/
-data/
+# See http://help.github.com/ignore-files/ for more about ignoring files.
 
-/~
-/node_modules
-.sass-cache
-*.css.map
+# dependencies
+node_modules
+
+# production
+data
+build
+
+# misc
+.DS_Store
 npm-debug.log
 
-local.sqlite
-
+# divio cloud
 .aldryn
 migrate.sh
