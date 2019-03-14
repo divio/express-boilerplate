@@ -38,9 +38,15 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+// DIVIO CLOUD ADDITIONS
+if (!process.env.STAGE) {
+  // disable caching on localdev
+  app.set('view cache', false);
+}
+
 // database connection example
 var pgp = require('pg-promise')(/*options*/)
-var db = pgp(process.env.DATABASE_URL || 'postgres://postgres@db:5432/db')
+var db = pgp(process.env.DEFAULT_DATABASE_DSN || 'postgres://postgres@db:5432/db')
 
 db.one('SELECT $1 AS value', 123)
   .then(function (data) {
@@ -51,3 +57,6 @@ db.one('SELECT $1 AS value', 123)
   })
 
 module.exports = app;
+
+// s3 connection
+// for an S3 connection use the ``DEFAULT_STORAGE_DSN`` environment variable

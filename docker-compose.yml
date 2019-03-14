@@ -1,4 +1,4 @@
-version: "3"
+version: "2.3"
 
 services:
   web:
@@ -10,7 +10,8 @@ services:
     volumes:
       - ".:/app:rw"
       - "./data:/data:rw"
-    command: sh -c './wait-for db:5432 -- npm start --prefix myapp'
+
+    command: sh -c './wait-for db:5432 -- npx nodemon --exec npm start'
     depends_on:
       - db
 
