@@ -20,6 +20,10 @@ To work seamless locally, you need to run *docker-compose* using the correct pre
 
     docker-compose run --rm web npm install jquery --save --prefix /
 
+And to save it to your projects directory::
+
+    docker-compose run --rm web npm install jquery --save
+
 Otherwise you might run into unexpected issues as the ``node_modules`` folder is in the root 
 of the container and your project directory. Alternatively delete the ``node_modules`` folder
 from the root of the container while working locally.
