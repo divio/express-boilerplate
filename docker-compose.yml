@@ -11,7 +11,7 @@ services:
       - ".:/app:rw"
       - "./data:/data:rw"
 
-    command: sh -c './wait-for db:5432 -- npx nodemon --exec npm start'
+    command: sh ./wait-for db:5432 -- npx nodemon --exec npm start
     depends_on:
       - db
 
