@@ -1,4 +1,4 @@
-FROM node:12.13.0-alpine
+FROM node:12.16.0-alpine
 
 RUN apk add tini
 
