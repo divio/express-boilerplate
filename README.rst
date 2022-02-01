@@ -4,7 +4,7 @@ Express Boilerplate
 
 `Divio Cloud <http://www.divio.com/>`_ based boilerplate to develop with Express JS.
 
-Up to date with `Express <https://expressjs.com/>`_ **4.17.1**.
+Up to date with `Express <https://expressjs.com/>`_ **4.17.2**.
 
 The project files have been generated using `express-generator <https://expressjs.com/en/starter/generator.html>`_.
 An example database connection has been added to ``myapp/app.js`` from the Express
