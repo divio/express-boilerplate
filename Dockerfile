@@ -1,12 +1,12 @@
 FROM node:16.13.2
 
-RUN apk add tini
+RUN apt-get update && apt-get install -y tini
 
 COPY package*.json /
 RUN npm install --prefix /
 
 ENV NODE_ENV=production
-ENTRYPOINT ["/sbin/tini", "--"]
+ENTRYPOINT ["tini", "--"]
 
 COPY . /app
 WORKDIR /app
