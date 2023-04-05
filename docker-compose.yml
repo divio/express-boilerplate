@@ -21,10 +21,6 @@ services:
     volumes:
       - ".:/app:rw"
       - "./data:/data:rw"
-    # The default command that the container starts with. If you'd like to run
-    # the project locally in Live configuration, you will need to change this.
-    # See https://docs.divio.com/en/latest/how-to/local-in-live-mode.html.
-    command: sh ./wait-for db:5432 -- npx nodemon --exec npm start
     depends_on:
       - db
 
